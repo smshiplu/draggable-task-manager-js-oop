@@ -9,7 +9,6 @@ export class TaskUI {
     this.storageData = localStorage.getItem("task-manager-oop-theme") || null;
     
     this.initializeElements();
-    console.log(this.elements.faviconIcon);
     this.bindingEvents();
     this.loadTheme();
   }
@@ -43,7 +42,7 @@ export class TaskUI {
     window.addEventListener("load", () => {
       this.elements.faviconIcon.href = FaviconIcon;
     });
-    
+
     this.elements.addTaskForm.addEventListener("submit", (e) => {
       this.handleAddTask(e);
     });
