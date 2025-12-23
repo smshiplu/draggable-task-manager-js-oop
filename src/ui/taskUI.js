@@ -1,6 +1,6 @@
 import { DOMHelpers } from "./DOMHelpers";
 import { successMessage, errorMessage  } from "../utils/toast";
-
+import FaviconIcon from "../../favicon.svg";
 export class TaskUI {
   constructor(taskService) {
     this.taskService = taskService;
@@ -9,12 +9,14 @@ export class TaskUI {
     this.storageData = localStorage.getItem("task-manager-oop-theme") || null;
     
     this.initializeElements();
+    console.log(this.elements.faviconIcon);
     this.bindingEvents();
     this.loadTheme();
   }
 
   initializeElements() {
     this.elements = {
+      faviconIcon: DOMHelpers.getElementById("favicon"),
       addTaskFormWrapper: DOMHelpers.getElementById("addTaskFormWrapper"),
       addTaskForm: DOMHelpers.getElementById("addTaskForm"),
       addTaskInput: DOMHelpers.getElementById("addTaskInput"),
@@ -38,6 +40,10 @@ export class TaskUI {
   }
 
   bindingEvents() {
+    window.addEventListener("load", () => {
+      this.elements.faviconIcon.href = FaviconIcon;
+    });
+    
     this.elements.addTaskForm.addEventListener("submit", (e) => {
       this.handleAddTask(e);
     });
