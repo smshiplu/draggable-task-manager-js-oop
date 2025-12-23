@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" id="html" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager(OOP)</title>
+  <link rel="stylesheet" href="./index.css">
+    
+  <script defer src="./assets/bundle.js"></script>
+</head>
+
+<body class="bg-linear-[25deg,#2a7b9b_0%,#57c785_50%,#eddd53_100%] dark:bg-linear-0 dark:bg-gray-900 text-gray-900 dark:text-white">
+  <header class="max-w-screen-xl flex flex-col md:flex-row flex-wrap items-center justify-between gap-8 mx-auto p-4">
+    <div class="brand">
+      <h1 class="text-4xl font-bold tracking-tighter flex flex-col gap-3">
+        <!-- 📝 Task Manager -->
+        <div>
+          <svg class="w-12 h-12 inline-block " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path stroke="currentColor" fill="none" d="M5.25 3C4.00736 3 3 4.00736 3 5.25V18.75C3 19.9926 4.00736 21 5.25 21H18.75C19.9926 21 21 19.9926 21 18.75V5.25C21 4.00736 19.9926 3 18.75 3H5.25ZM10.7803 8.78033L8.78033 10.7803C8.48744 11.0732 8.01256 11.0732 7.71967 10.7803L6.71967 9.78033C6.42678 9.48744 6.42678 9.01256 6.71967 8.71967C7.01256 8.42678 7.48744 8.42678 7.78033 8.71967L8.25 9.18934L9.71967 7.71967C10.0126 7.42678 10.4874 7.42678 10.7803 7.71967C11.0732 8.01256 11.0732 8.48744 10.7803 8.78033ZM16.75 8.5C17.1642 8.5 17.5 8.83579 17.5 9.25C17.5 9.66421 17.1642 10 16.75 10H13.25C12.8358 10 12.5 9.66421 12.5 9.25C12.5 8.83579 12.8358 8.5 13.25 8.5H16.75ZM12.5001 14.75C12.5001 14.3358 12.8358 14 13.2501 14H16.7499C17.1642 14 17.4999 14.3358 17.4999 14.75C17.4999 15.1642 17.1642 15.5 16.7499 15.5H13.2501C12.8358 15.5 12.5001 15.1642 12.5001 14.75ZM10.7803 13.2197C11.0732 13.5126 11.0732 13.9874 10.7803 14.2803L8.78033 16.2803C8.48744 16.5732 8.01256 16.5732 7.71967 16.2803L6.71967 15.2803C6.42678 14.9874 6.42678 14.5126 6.71967 14.2197C7.01256 13.9268 7.48744 13.9268 7.78033 14.2197L8.25 14.6893L9.71967 13.2197C10.0126 12.9268 10.4874 12.9268 10.7803 13.2197Z" fill="#212121"></path> </g></svg> Task Manager
+        </div>
+        <small class="block text-sm font-extralight tracking-[12px]">Manage Your Day</small>
+      </h1>
+    </div>
+
+    <nav class="flex items-center">
+      <!-- Export Btn -->
+      <button id="exportBtn" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-2 sm:px-5 py-2 sm:py-2.5 text-center me-2 mb-2 cursor-pointer flex items-center justify-between gap-2">Export
+        <svg class="w-6 h-6 -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
+        </svg>
+      </button>
+
+      <!-- Import Btn -->
+      <button id="importBtn" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-2 sm:px-5 py-2 sm:py-2.5 text-center me-2 mb-2 cursor-pointer flex items-center justify-between gap-2">Import
+        <svg class="w-6 h-6 rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
+        </svg>
+      </button>
+
+      <!-- Theme Btn -->
+      <button id="themeBtn" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-2 sm:px-5 py-2 sm:py-2.5 text-center me-2 mb-2 cursor-pointer flex items-center justify-between gap-2">Theme
+        <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="max-w-screen-xl mx-auto p-4">
+    <section id="addAndUpdateTaskSection" class="py-4">
+      <!-- Task Adding Form -->
+      <div id="addTaskFormWrapper">
+        <h2 id="formTitle" class="text-2xl font-bold mb-2">Add Tasks</h2>
+        <form id="addTaskForm" class="flex flex-col sm:flex-row gap-4">
+          <input type="text" id="addTaskInput" name="addTaskInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Learning JavaScript" />
+          <button type="submit" id="addTaskBtn" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center cursor-pointer">Add</button>
+        </form>
+      </div>
+      
+      <!-- Task Editing Form -->
+      <div id="editTaskFormWrapper" class="hidden">
+        <h2 id="formTitle" class="text-2xl font-bold mb-2">Edit Tasks</h2>
+        <form id="editTaskForm" class="flex flex-col sm:flex-row gap-4">
+          <input type="text" id="editTaskInput" name="editTaskInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Learning JavaScript" />
+            
+          <button type="submit" id="editTaskBtn" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center cursor-pointer">Save</button>
+
+          <button type="button" id="cancelEditTaskBtn" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center w-full sm:w-auto cursor-pointer">Cancel</button>
+        </form>
+      </div>
+      </div>
+    </section>
+
+    <section class="display-task-section p-4 bg-white/50 dark:bg-gray-700 rounded-lg mt-10">
+      <h2 class="text-2xl font-bold mb-6">Tasks Overview</h2>
+      <p class="text-xs text-center my-8 hidden sm:flex items-center justify-center gap-1 flex-wrap">
+        <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm9.408-5.5a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z" clip-rule="evenodd"/>
+      </svg> Drag the task to move it and drop it into the desired section.</p>
+
+      <div class="display-task flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8">
+        <!-- Pending Task -->
+        <div id="pendingTask" class="cards bg-white/30 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-lg shadow md:max-w-72 w-full p-2 relative overflow-hidden">
+          <h3 class="task-type-title text-gray-700 bg-amber-300 rounded-t-lg p-2 text-sm sm:text-md font-bold tracking-tighter flex items-center justify-between absolute top-0 left-0 w-full">
+            Pending Tasks
+            <small id="pendingTaskCount" class="task-count w-8 h-8 bg-white text-gray-700 font-bold flex items-center justify-center rounded">0</small>
+          </h3>
+
+          <div id="pendingTaskResult" class="result mt-12 min-h-32"> 
+            <!-- <div class="card bg-yellow-50 dark:bg-gray-700 dark:border-gray-600 p-2 my-2 h-32 shadow-2xl rounded flex flex-col justify-between">
+              <div>
+                <p class="task-title font-semibold text-sm mb-2 max-h-14 overflow-hidden text-ellipsis line-clamp-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <time class="date-time text-xs text-gray-400 italic flex items-center justify-center" datetime="10/17/2025 2:00 PM">10/17/2025 2:00 PM</time>
+              </div>
+              <div class="actions text-center flex justify-center items-center gap-2 relative z-10">
+                <button id="completeBtn" title="complete" class="w-6 h-6 bg-green-600 text-xs rounded cursor-pointer transition-all duration-100 ease-in-out hover:scale-110">✔</button>
+                <button id="editBtn" title="edit" class="w-6 h-6 bg-blue-600 text-xs rounded cursor-pointer transition-all duration-100 ease-in-out hover:scale-110">🖍</button>
+                <button id="moveBtn" title="move" class="w-6 h-6 bg-purple-600 text-xs rounded cursor-pointer transition-all duration-100 ease-in-out hover:scale-110 relative flex items-center justify-center">✈
+
+                  <div id="tooltip" class="tooltip absolute bottom-8 -right-8 z-20  inline-block p-1 text-sm font-medium text-gray-900 bg-gray-600 dark:bg-white border border-gray-200 rounded-lg shadow-xs opacity-100 w-20">
+                    <div class="flex flex-col gap-1 relative before:content-['▼'] before:absolute before:-bottom-4 before:left-1/2 before:-translate-x-1/2  before:text-gray-600 dark:before:text-white">
+                      <a href="#\" class="border-2 border-gray-700 rounded p-1 text-xs cursor-pointer bg-gray-300 transition-all hover:scale-105 block">Ongoing</a>
+                      <a href="#\" class="border-2 border-gray-700 rounded p-1 text-xs cursor-pointer bg-gray-300 transition-all hover:scale-105 block">Completed</a>
+                    </div>
+                </div>
+
+                </button>
+
+
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Ongoing Task -->
+        <div id="ongoingTask" class="cards bg-white/30 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-lg shadow md:max-w-72 w-full p-2 relative overflow-hidden">
+          <h3 class="task-type-title text-gray-700 bg-amber-300 rounded-t-lg p-2 text-sm sm:text-md font-bold tracking-tighter flex items-center justify-between absolute top-0 left-0 w-full">
+            Ongoing Tasks
+            <small id="ongoingTaskCount" class="task-count w-8 h-8 bg-white text-gray-700 font-bold flex items-center justify-center rounded">0</small>
+          </h3>
+          <div id="ongoingTaskResult" class="result mt-12 min-h-32"></div>
+        </div>
+
+        <!-- Completed Task -->
+        <div id="completedTask" class="cards bg-white/30 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-lg shadow md:max-w-72 w-full p-2 relative overflow-hidden">
+          <h3 class="task-type-title text-gray-700 bg-amber-300 rounded-t-lg p-2 text-sm sm:text-md font-bold tracking-tighter flex items-center justify-between absolute top-0 left-0 w-full">
+            Completed Tasks
+            <small id="completedTaskCount" class="task-count w-8 h-8 bg-white text-gray-700 font-bold flex items-center justify-center rounded">0</small>
+          </h3>
+          <div id="completedTaskResult" class="result mt-12 min-h-32"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="max-w-screen-xl mx-auto p-4">
+    <p class="text-center text-xs ">Made with 🧡 as an OOP edition project.</p>
+  </footer>
+</body>
+</html>
