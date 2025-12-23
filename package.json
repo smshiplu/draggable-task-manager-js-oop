@@ -1,5 +1,5 @@
 {
-  "name": "Draggable Task Manager - OOP Edition",
+  "name": "Draggable Task Manager (OOP Edition)",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --mode development"
   },
   "keywords": [],
-  "author": "",
+  "author": "SM Nasir Uddin",
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
