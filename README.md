@@ -1,4 +1,4 @@
-# Task Manager (OOP Edition)
+# Draggable Task Manager (OOP Edition)
 
 ## 🧠 What I Learned from Building a JavaScript Task Manager (OOP Edition)
 
