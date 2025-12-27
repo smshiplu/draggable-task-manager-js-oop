@@ -36,7 +36,7 @@ This project was a turning point in how I approach frontend development. It taug
 <br/>
 
 ### 👉 Demo
-<img src="./Draggable-task-manager.gif" width="100%"/>
+<img src="./demo.gif" width="100%"/>
 
 <br/>
 
@@ -45,5 +45,5 @@ This project was a turning point in how I approach frontend development. It taug
 
 <br/>
 
-### 👉 Screenshot Light Mode
+### 👉 Screenshot (Light Mode)
 ![Task Manager (OOP Edition)](./screenshot-light.png "Light View")
