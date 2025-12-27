@@ -33,24 +33,17 @@ I built a **Task Manager** using **Object-Oriented Programming (OOP)** in JavaSc
 This project was a turning point in how I approach frontend development. It taught me that writing maintainable code is just as important as making things work. I now feel more confident building scalable apps and collaborating on larger codebases.
 
 ---
+<br/>
 
-Feel free to check out the repo and explore the code. Feedback is welcome!
-
-🔗 [GitHub Repository Link]  
-📢 #JavaScript #OOP #FrontendDev #TaskManager #CleanCode #ModularDesign
-
----
+### 👉 Demo
+<img src="./Draggable-task-manager.gif" width="100%"/>
 
 <br/>
 
-<p style="display: flex; align-items: center; justify-content: center; ">
-  <img src="./Draggable-task-manager.gif" width="100%"/>
-</p>
-
-<br/>
-
+### 👉 Screenshot (Dark Mode)
 ![Task Manager (OOP Edition)](./screenshot-dark.png "Dark View")
 
 <br/>
 
+### 👉 Screenshot Light Mode
 ![Task Manager (OOP Edition)](./screenshot-light.png "Light View")
