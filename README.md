@@ -43,6 +43,12 @@ Feel free to check out the repo and explore the code. Feedback is welcome!
 
 <br/>
 
+<p style="text-align: center;">
+  <img src="./Draggable-task-manager.gif" width="60%"/>
+</p>
+
+<br/>
+
 ![Task Manager (OOP Edition)](./screenshot-dark.png "Dark View")
 
 <br/>
