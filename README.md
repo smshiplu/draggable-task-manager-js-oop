@@ -44,7 +44,7 @@ Feel free to check out the repo and explore the code. Feedback is welcome!
 <br/>
 
 <p style="display: flex; align-items: center; justify-content: center; ">
-  <img src="./Draggable-task-manager.gif" width="70%"/>
+  <img src="./Draggable-task-manager.gif" width="100%"/>
 </p>
 
 <br/>
